@@ -6,14 +6,14 @@ function Navbar(props) {
 
     const [isChecked, setIsChecked] = useState(false);
 
-    const handleThemeBtnInputClick = (event) => {                   /// IMPLEMENT PROPERLY !!!
+    const handleThemeBtnInputClick = (event) => {
         setIsChecked(event.target.checked);
         const element = document.getElementById('mainBody');
         if (element.getAttribute('data-bs-theme')==='light') {
-            element.someProperty = 'data-bs-theme="dark"';
+            element.setAttribute('data-bs-theme','dark');
         }
         else{
-            element.someProperty = 'data-bs-theme="light"';
+           element.setAttribute('data-bs-theme','light');
         }
     };
 
