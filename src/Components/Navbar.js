@@ -9,7 +9,7 @@ function Navbar(props) {
     const handleThemeBtnInputClick = (event) => {                   /// IMPLEMENT PROPERLY !!!
         setIsChecked(event.target.checked);
         const element = document.getElementById('mainBody');
-        if (element.someProperty === 'data-bs-theme="light"') {
+        if (element.getAttribute('data-bs-theme')==='light') {
             element.someProperty = 'data-bs-theme="dark"';
         }
         else{
